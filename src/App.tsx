@@ -1,11 +1,10 @@
-import "./App.css";
+import bg from "./assets/img//hero-woman-img.svg";
 
-function App() {
+export const App = () => {
   return (
     <>
-      <h1>teste</h1>
+      <h1 className="h6">teste</h1>
+      <img src={bg} alt="" />
     </>
   );
-}
-
-export default App;
+};

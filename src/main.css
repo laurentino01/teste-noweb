@@ -1,0 +1,19 @@
+:root {
+  --yellow: #fbaf17;
+  --dark-blue: #202332;
+  --electric-blue: #1f2860;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gotham", sans-serif;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  padding: 0 clamp(1.25rem, 0.8929rem + 1.7857vw, 2.5rem);
+}
