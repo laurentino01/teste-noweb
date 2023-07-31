@@ -1,4 +1,4 @@
-import bg from "./assets/img//hero-woman-img.svg";
+import bg from "./assets/img/about-front-img.svg";
 
 export const App = () => {
   return (
