@@ -16,7 +16,7 @@ export const Header = () => {
           position: "absolute",
           left: 0,
           zIndex: 0,
-          width: "clamp(3.75rem, 2.5rem + 6.25vw, 8.125rem)",
+          width: "clamp(3.75rem, 3.0357rem + 3.5714vw, 6.25rem)",
         }}
       />
       <header
