@@ -1,5 +1,4 @@
-/* import teste from "../../assets/products-imgs/lampada.svg";
- */ import { Typography } from "../typography/Typography";
+import { Typography } from "../typography/Typography";
 
 interface IShowCaseProps {
   srcImg: string;
