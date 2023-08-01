@@ -18,6 +18,24 @@ export const DropDown: React.FC<IDropDownProps> = ({ children }) => {
   const [animate, setAnimate] = useState(false);
   const [items, setItems] = useState<IDropDownItemsData[]>([]);
 
+  const handleMouseEnter = () => {
+    if (!isOpen) {
+      setIsOpen(true);
+      setTimeout(() => {
+        setAnimate(true);
+      }, 200);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (isOpen) {
+      setAnimate(false);
+      setTimeout(() => {
+        setIsOpen(false);
+      }, 200);
+    }
+  };
+
   useEffect(() => {
     const itemsList: IDropDownItemsData[] = [
       { srcImg: "./src/assets/products-imgs/lampada.svg", title: "Lâmpada" },
@@ -44,15 +62,8 @@ export const DropDown: React.FC<IDropDownProps> = ({ children }) => {
             gap: 5,
             cursor: "pointer",
           }}
-          onClick={() => {
-            setTimeout(() => {
-              setIsOpen(!isOpen);
-            }, 400);
-
-            if (isOpen) {
-              setAnimate(!animate);
-            }
-          }}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
         >
           <Typography element="h6" variant="paragraph">
             {children}
@@ -70,7 +81,7 @@ export const DropDown: React.FC<IDropDownProps> = ({ children }) => {
               top: "40px",
 
               opacity: animate ? 1 : 0,
-              transition: "0.3s",
+              transition: "0.2s",
               boxShadow: "5px 5px 5px #13141b42",
             }}
           >
