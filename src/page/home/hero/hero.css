@@ -3,16 +3,18 @@
   padding-left: clamp(1.25rem, -3.3929rem + 23.2143vw, 17.5rem);
   padding-right: 140px;
   background-image: url("../../../assets/bg-imgs/hero-background.svg");
+  background-repeat: no-repeat;
+  overflow: hidden;
 }
 .hero h1,
 .hero p {
   color: white;
   margin-bottom: 20px;
-  white-space: nowrap;
 }
 
 .hero h1 {
-  line-height: 60px;
+  line-height: clamp(1.875rem, 1.3393rem + 2.6786vw, 3.75rem);
+  white-space: nowrap;
 }
 .hero p {
   line-height: 30px;
@@ -20,6 +22,48 @@
 .hero section {
   margin-top: 60px;
 }
+.hero button {
+  margin-bottom: 20px;
+}
+.hero button:first-of-type {
+  box-shadow: 5px 5px 20px 0px #fbaf1785;
+}
 .womanImg {
-  width: 540px;
+  width: clamp(28.125rem, 8.0625rem + 41.7969vw, 34.8125rem);
+}
+.ver-mais {
+  cursor: pointer;
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+}
+.ver-mais img {
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 40px;
+  }
+  .hero section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .womanImg {
+    display: none;
+  }
+  .hero button {
+    width: 60%;
+  }
+}
+@media (max-width: 450px) {
+  .hero {
+    padding: 20px;
+  }
+  .hero button {
+    width: 90%;
+  }
 }

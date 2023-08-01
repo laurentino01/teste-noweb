@@ -12,14 +12,14 @@ export const Hero = () => {
           ILUMINE O SEU <br /> DIA A DIA!
         </Typography>
         <Typography element="p" variant="paragraph">
-          Aqui na Elétrica J. Santos queremos trazer mais luz para o seu dia{" "}
-          <br />a dia! Temos produtos para toda sua casa com a melhor
-          <br /> qualidade e atendimento da região!
+          Aqui na Elétrica J. Santos queremos trazer mais luz para o seu dia a
+          dia! Temos produtos para toda sua casa com a melhor qualidade e
+          atendimento da região!
         </Typography>
         <Button variant="primary">VEJA NOSSOS PRODUTOS</Button>
         <Button variant="outline">NOS CONHEÇA MELHOR</Button>
 
-        <div>
+        <div className="ver-mais">
           <img src={arrow} alt="" />
           <Typography element="p" variant="paragraph">
             Role para ver mais

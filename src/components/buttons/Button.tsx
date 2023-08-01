@@ -16,8 +16,7 @@ export const Button: React.FC<IButtonProps> = ({ children, variant }) => {
         backgroundColor: "var(--orange)",
         color: "var(--dark)",
         textTransform: "uppercase",
-        padding:
-          "clamp(0.75rem, 0.6964rem + 0.2679vw, 0.9375rem) clamp(1.25rem, 1.1607rem + 0.4464vw, 1.5625rem)",
+        padding: "15px 35px",
         borderRadius: "8px",
       },
       dark: {
@@ -36,8 +35,7 @@ export const Button: React.FC<IButtonProps> = ({ children, variant }) => {
         backgroundColor: "#20233200",
         color: "white",
         textTransform: "uppercase",
-        padding:
-          "clamp(0.75rem, 0.6964rem + 0.2679vw, 0.9375rem) clamp(1.25rem, 1.1607rem + 0.4464vw, 1.5625rem)",
+        padding: "15px 40px",
         borderRadius: "8px",
       },
       cta: {
@@ -45,7 +43,6 @@ export const Button: React.FC<IButtonProps> = ({ children, variant }) => {
         border: "none",
         backgroundColor: "var(--dark-blue)",
         color: "white",
-
         padding: "7px 20px",
         borderRadius: "8px",
       },
