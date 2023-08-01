@@ -1,0 +1,25 @@
+.hero {
+  display: flex;
+  padding-left: clamp(1.25rem, -3.3929rem + 23.2143vw, 17.5rem);
+  padding-right: 140px;
+  background-image: url("../../../assets/bg-imgs/hero-background.svg");
+}
+.hero h1,
+.hero p {
+  color: white;
+  margin-bottom: 20px;
+  white-space: nowrap;
+}
+
+.hero h1 {
+  line-height: 60px;
+}
+.hero p {
+  line-height: 30px;
+}
+.hero section {
+  margin-top: 60px;
+}
+.womanImg {
+  width: 540px;
+}
