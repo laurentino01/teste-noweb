@@ -16,12 +16,12 @@ nav {
   width: clamp(9.375rem, -2.2321rem + 58.0357vw, 50rem);
 }
 .list-items {
-  margin-left: 70px;
+  margin-left: clamp(0rem, -5rem + 10.4167vw, 4.375rem);
   list-style: none;
 }
 nav li {
   display: inline-block;
-  margin-left: 20px;
+  margin-left: clamp(0.3125rem, 0.0446rem + 1.3393vw, 1.25rem);
 }
 
 li a {
@@ -35,4 +35,14 @@ a.active {
   border-bottom: 3px solid white;
   border-bottom-right-radius: 2px;
   border-bottom-left-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  .list-items {
+    display: none;
+  }
+  nav {
+    justify-content: end;
+    padding-right: 20px;
+  }
 }

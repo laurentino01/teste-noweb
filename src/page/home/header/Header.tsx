@@ -5,6 +5,7 @@ import pattern from "../../../assets/header-pattern.svg";
 import { Button } from "../../../components/buttons/Button";
 import { DropDown } from "../../../components/dropdown/DropDown";
 import "./header.css";
+import { ResponsiveMenu } from "../../../components/responsiveMenu/responsiveMenu";
 
 export const Header = () => {
   return (
@@ -52,6 +53,7 @@ export const Header = () => {
               <Button variant="cta">Contato</Button>
             </li>
           </ul>
+          <ResponsiveMenu />
         </nav>
       </header>
     </div>
