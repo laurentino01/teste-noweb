@@ -14,7 +14,7 @@ export const ShowCase: React.FC<IShowCaseProps> = ({
 }) => {
   const variant = {
     normal: "200px",
-    small: "70px",
+    small: "60px",
   };
 
   const sizeImg = {
@@ -49,7 +49,10 @@ export const ShowCase: React.FC<IShowCaseProps> = ({
           width: variant[size],
         }}
       >
-        <img src={srcImg} style={{ width: sizeImg[size] }} />
+        <img
+          src={srcImg}
+          style={{ width: sizeImg[size], height: sizeImg[size] }}
+        />
       </div>
     </div>
   );

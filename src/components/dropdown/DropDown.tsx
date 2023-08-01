@@ -1,5 +1,13 @@
 import { useEffect, useState } from "react";
 import arrow from "../../assets/icons/arrow-down-icon.svg";
+import lampada from "../../assets/products-imgs/lampada.svg";
+import lustres from "../../assets/products-imgs/lustres-categoria.svg";
+import luminarias from "../../assets/products-imgs/luminárias-categoria.svg";
+import decoracoes from "../../assets/products-imgs/decoracoes-categoia.svg";
+import acessorios from "../../assets/products-imgs/acessorios-categorias.svg";
+import ferramentas from "../../assets/products-imgs/ferramentas-categoria.svg";
+import utensilios from "../../assets/products-imgs/utensilios-categoria.svg";
+import cabos from "../../assets/products-imgs/cabos-categorias.svg";
 
 interface IDropDownProps {
   children: React.ReactNode;
@@ -38,7 +46,20 @@ export const DropDown: React.FC<IDropDownProps> = ({ children }) => {
 
   useEffect(() => {
     const itemsList: IDropDownItemsData[] = [
-      { srcImg: "./src/assets/products-imgs/lampada.svg", title: "Lâmpada" },
+      { srcImg: lampada, title: "Lâmpada" },
+      { srcImg: lustres, title: "Lustres" },
+      { srcImg: luminarias, title: "Luminárias" },
+      { srcImg: decoracoes, title: "Decorações" },
+      { srcImg: acessorios, title: "Acessórios" },
+      { srcImg: ferramentas, title: "Ferramentas" },
+      {
+        srcImg: utensilios,
+        title: "Utensílios Domésticos",
+      },
+      {
+        srcImg: cabos,
+        title: "Cabos",
+      },
     ];
 
     setItems(itemsList);
@@ -107,10 +128,7 @@ export const DropDown: React.FC<IDropDownProps> = ({ children }) => {
                     cursor: "pointer",
                   }}
                 >
-                  <ShowCase
-                    srcImg="./src/assets/products-imgs/lampada.svg"
-                    size="small"
-                  ></ShowCase>
+                  <ShowCase srcImg={item.srcImg} size="small"></ShowCase>
                   <Typography element="h6" variant="button">
                     {item.title}
                   </Typography>
