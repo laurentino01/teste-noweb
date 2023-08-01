@@ -1,0 +1,56 @@
+/* import teste from "../../assets/products-imgs/lampada.svg";
+ */ import { Typography } from "../typography/Typography";
+
+interface IShowCaseProps {
+  srcImg: string;
+  children?: React.ReactNode;
+  size: "normal" | "small";
+}
+
+export const ShowCase: React.FC<IShowCaseProps> = ({
+  srcImg,
+  children,
+  size,
+}) => {
+  const variant = {
+    normal: "200px",
+    small: "70px",
+  };
+
+  const sizeImg = {
+    normal: "140px",
+    small: "40px",
+  };
+
+  return (
+    <div
+      style={{
+        color: "var(--orange)",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "column",
+        gap: 10,
+        height: variant[size],
+        width: variant[size],
+      }}
+    >
+      <Typography variant="subtitle" element="h6">
+        {children}
+      </Typography>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          backgroundColor: "var(--orange)",
+          borderRadius: "15px",
+          height: variant[size],
+          width: variant[size],
+        }}
+      >
+        <img src={srcImg} style={{ width: sizeImg[size] }} />
+      </div>
+    </div>
+  );
+};

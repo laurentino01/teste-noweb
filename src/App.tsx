@@ -1,9 +1,9 @@
-import { Button } from "./components/buttons/Button";
+import { DropDown } from "./components/dropdown/DropDown";
 
 export const App = () => {
   return (
     <>
-      <Button variant="dark">contato</Button>
+      <DropDown>Categorias</DropDown>
     </>
   );
 };
