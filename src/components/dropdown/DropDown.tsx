@@ -15,7 +15,7 @@ import { Typography } from "../typography/Typography";
 
 export const DropDown: React.FC<IDropDownProps> = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [displayType, setDisplayType] = useState("none");
+  const [animate, setAnimate] = useState(false);
   const [items, setItems] = useState<IDropDownItemsData[]>([]);
 
   useEffect(() => {
@@ -26,17 +26,6 @@ export const DropDown: React.FC<IDropDownProps> = ({ children }) => {
     setItems(itemsList);
   }, []);
 
-  useEffect(() => {
-    if (!isOpen) {
-      setTimeout(() => {
-        setDisplayType("none");
-      }, 400);
-    }
-
-    if (isOpen) {
-      setDisplayType("block");
-    }
-  }, [isOpen]);
   return (
     <>
       <div
@@ -55,63 +44,72 @@ export const DropDown: React.FC<IDropDownProps> = ({ children }) => {
             gap: 5,
             cursor: "pointer",
           }}
-          onMouseOver={() => setIsOpen(!isOpen)}
+          onClick={() => {
+            setTimeout(() => {
+              setIsOpen(!isOpen);
+            }, 400);
+
+            if (isOpen) {
+              setAnimate(!animate);
+            }
+          }}
         >
           <Typography element="h6" variant="paragraph">
             {children}
           </Typography>
           <img src={arrow} />
         </div>
-
-        <div
-          style={{
-            backgroundColor: "white",
-            width: "300px",
-            borderRadius: "15px",
-            padding: "15px",
-            position: "absolute",
-            top: "40px",
-            display: displayType,
-            opacity: isOpen ? 1 : 0,
-            transition: "0.3s",
-            boxShadow: "5px 5px 5px #13141b42",
-          }}
-        >
+        {isOpen && (
           <div
             style={{
-              width: 0,
-              height: 0,
-              top: "-13px",
-              left: "50%",
-              right: "25%",
-              borderLeft: "10px solid transparent",
-              borderRight: " 10px solid transparent",
-              borderBottom: "15px solid white",
+              backgroundColor: "white",
+              width: "300px",
+              borderRadius: "15px",
+              padding: "15px",
               position: "absolute",
+              top: "40px",
+
+              opacity: animate ? 1 : 0,
+              transition: "0.3s",
+              boxShadow: "5px 5px 5px #13141b42",
             }}
-          ></div>
-          <ul>
-            {items.map((item) => (
-              <li
-                key={item.title}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 20,
-                  cursor: "pointer",
-                }}
-              >
-                <ShowCase
-                  srcImg="./src/assets/products-imgs/lampada.svg"
-                  size="small"
-                ></ShowCase>
-                <Typography element="h6" variant="button">
-                  {item.title}
-                </Typography>
-              </li>
-            ))}
-          </ul>
-        </div>
+          >
+            <div
+              style={{
+                width: 0,
+                height: 0,
+                top: "-13px",
+                left: "50%",
+                right: "25%",
+                borderLeft: "10px solid transparent",
+                borderRight: " 10px solid transparent",
+                borderBottom: "15px solid white",
+                position: "absolute",
+              }}
+            ></div>
+            <ul>
+              {items.map((item) => (
+                <li
+                  key={item.title}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 20,
+                    cursor: "pointer",
+                  }}
+                >
+                  <ShowCase
+                    srcImg="./src/assets/products-imgs/lampada.svg"
+                    size="small"
+                  ></ShowCase>
+                  <Typography element="h6" variant="button">
+                    {item.title}
+                  </Typography>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     </>
   );
