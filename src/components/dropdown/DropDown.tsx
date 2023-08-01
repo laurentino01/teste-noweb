@@ -54,6 +54,8 @@ export const DropDown: React.FC<IDropDownProps> = ({ children }) => {
           alignItems: "center",
           justifyContent: "center",
         }}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
       >
         <div
           style={{
@@ -62,8 +64,6 @@ export const DropDown: React.FC<IDropDownProps> = ({ children }) => {
             gap: 5,
             cursor: "pointer",
           }}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
         >
           <Typography element="h6" variant="paragraph">
             {children}
