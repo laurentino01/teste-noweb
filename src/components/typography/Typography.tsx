@@ -27,7 +27,7 @@ export const Typography: React.FC<ITypographyProps> = ({
       },
       button: {
         fontWeight: 500,
-        fontSize: "12px",
+        fontSize: "14px",
       },
       menuItems: {
         fontSize: "14px",

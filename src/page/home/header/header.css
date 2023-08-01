@@ -15,8 +15,9 @@ nav {
   align-items: center;
   width: clamp(9.375rem, -2.2321rem + 58.0357vw, 50rem);
 }
-nav ul {
+.list-items {
   margin-left: 70px;
+  list-style: none;
 }
 nav li {
   display: inline-block;

@@ -54,7 +54,6 @@ export const DropDown: React.FC<IDropDownProps> = ({ children }) => {
           justifyContent: "center",
         }}
         onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
       >
         <div
           style={{
@@ -71,6 +70,7 @@ export const DropDown: React.FC<IDropDownProps> = ({ children }) => {
         </div>
         {isOpen && (
           <div
+            onMouseLeave={handleMouseLeave}
             style={{
               backgroundColor: "white",
               width: "300px",
@@ -78,7 +78,6 @@ export const DropDown: React.FC<IDropDownProps> = ({ children }) => {
               padding: "15px",
               position: "absolute",
               top: "40px",
-
               opacity: animate ? 1 : 0,
               transition: "0.2s",
               boxShadow: "5px 5px 5px #13141b42",

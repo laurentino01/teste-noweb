@@ -29,7 +29,7 @@ export const Header = () => {
           <img src={logo} alt="" style={{ width: "100px" }} />
         </div>
         <nav>
-          <ul style={{ listStyle: "none" }}>
+          <ul className="list-items">
             <li>
               <a href="#">Home</a>
             </li>

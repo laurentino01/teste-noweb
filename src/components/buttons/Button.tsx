@@ -46,7 +46,7 @@ export const Button: React.FC<IButtonProps> = ({ children, variant }) => {
         backgroundColor: "var(--dark-blue)",
         color: "white",
 
-        padding: "10px 20px",
+        padding: "7px 20px",
         borderRadius: "8px",
       },
     };
