@@ -1,11 +1,9 @@
-import { Typography } from "./components/typography/Typography";
+import { Button } from "./components/buttons/Button";
 
 export const App = () => {
   return (
     <>
-      <Typography element="h1" variant="paragraph">
-        teste
-      </Typography>
+      <Button variant="dark">contato</Button>
     </>
   );
 };
