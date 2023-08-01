@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 import logo from "../../../assets/bg-imgs/logo.svg";
 import pattern from "../../../assets/header-pattern.svg";
 import { Button } from "../../../components/buttons/Button";
@@ -26,21 +28,25 @@ export const Header = () => {
         }}
       >
         <div className="logo-area">
-          <img src={logo} alt="" style={{ width: "100px" }} />
+          <img
+            src={logo}
+            alt=""
+            style={{ width: "100px", cursor: "pointer" }}
+          />
         </div>
         <nav>
           <ul className="list-items">
             <li>
-              <a href="#">Home</a>
+              <NavLink to="home">Home</NavLink>
             </li>
             <li>
               <DropDown>Categorias</DropDown>
             </li>
             <li>
-              <a href="#">Sobre</a>
+              <NavLink to="/sobre">Sobre</NavLink>
             </li>
             <li>
-              <a href="#">Localização</a>
+              <NavLink to="/Localização">Localização</NavLink>
             </li>
             <li>
               <Button variant="cta">Contato</Button>
