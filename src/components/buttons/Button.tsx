@@ -45,9 +45,8 @@ export const Button: React.FC<IButtonProps> = ({ children, variant }) => {
         border: "none",
         backgroundColor: "var(--dark-blue)",
         color: "white",
-        textTransform: "uppercase",
-        padding:
-          "clamp(0.375rem, 0.3036rem + 0.3571vw, 0.625rem) clamp(1.25rem, 1.1607rem + 0.4464vw, 1.5625rem)",
+
+        padding: "10px 20px",
         borderRadius: "8px",
       },
     };

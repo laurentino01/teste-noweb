@@ -1,0 +1,30 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 55px;
+}
+.logo-area {
+  padding-left: clamp(1.25rem, -3.3929rem + 23.2143vw, 17.5rem);
+}
+nav {
+  background-color: var(--orange);
+  height: 100%;
+  border-radius: 50px 0 0 50px;
+  display: flex;
+  align-items: center;
+  width: clamp(9.375rem, -2.2321rem + 58.0357vw, 50rem);
+}
+nav ul {
+  margin-left: 70px;
+}
+nav li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+li a {
+  font-size: 14px;
+  text-decoration: none;
+  color: var(--dark-blue);
+}

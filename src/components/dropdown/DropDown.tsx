@@ -64,7 +64,7 @@ export const DropDown: React.FC<IDropDownProps> = ({ children }) => {
             cursor: "pointer",
           }}
         >
-          <Typography element="h6" variant="paragraph">
+          <Typography element="h6" variant="menuItems">
             {children}
           </Typography>
           <img src={arrow} />

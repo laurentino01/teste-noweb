@@ -2,7 +2,7 @@ import { useMemo } from "react";
 
 interface ITypographyProps {
   element: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
-  variant: "title" | "subtitle" | "paragraph" | "button";
+  variant: "title" | "subtitle" | "paragraph" | "button" | "menuItems";
   children: React.ReactNode;
 }
 
@@ -26,8 +26,12 @@ export const Typography: React.FC<ITypographyProps> = ({
         fontSize: "clamp(0.875rem, 0.8036rem + 0.3571vw, 1.125rem)",
       },
       button: {
-        fontWeight: 600,
-        fontSize: "clamp(1rem, 0.9643rem + 0.1786vw, 1.125rem)",
+        fontWeight: 500,
+        fontSize: "12px",
+      },
+      menuItems: {
+        fontSize: "14px",
+        fontWeight: 400,
       },
     };
 

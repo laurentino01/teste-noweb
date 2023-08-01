@@ -1,9 +1,12 @@
 import logo from "../../../assets/bg-imgs/logo.svg";
 import pattern from "../../../assets/header-pattern.svg";
+import { Button } from "../../../components/buttons/Button";
+import { DropDown } from "../../../components/dropdown/DropDown";
+import "./header.css";
 
 export const Header = () => {
   return (
-    <div className="container" style={{ position: "relative" }}>
+    <div style={{ position: "relative" }}>
       <img
         src={pattern}
         alt=""
@@ -16,17 +19,34 @@ export const Header = () => {
       />
       <header
         style={{
-          width: "850px",
           margin: "0 auto",
-          padding: "15px",
+
           position: "relative",
           zIndex: 1,
         }}
       >
-        <div>
+        <div className="logo-area">
           <img src={logo} alt="" style={{ width: "100px" }} />
         </div>
-        <nav></nav>
+        <nav>
+          <ul style={{ listStyle: "none" }}>
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <DropDown>Categorias</DropDown>
+            </li>
+            <li>
+              <a href="#">Sobre</a>
+            </li>
+            <li>
+              <a href="#">Localização</a>
+            </li>
+            <li>
+              <Button variant="cta">Contato</Button>
+            </li>
+          </ul>
+        </nav>
       </header>
     </div>
   );
