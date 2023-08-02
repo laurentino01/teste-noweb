@@ -18,7 +18,7 @@ export const Card: React.FC<ICardProps> = ({
   return (
     <div
       style={{
-        width: "260px",
+        width: "220px",
         backgroundColor: "white",
         borderRadius: "15px 15px 0 0",
       }}
@@ -39,16 +39,16 @@ export const Card: React.FC<ICardProps> = ({
         >
           {tag}
         </div>
-        <img src={srcImg} alt="" style={{ width: "260px" }} />
+        <img src={srcImg} alt="" style={{ width: "220px" }} />
         <div
           style={{
             backgroundColor: "var(--dark-blue)",
-            width: "217px",
-            height: "19px",
+            width: "200px",
+            height: "10px",
             borderRadius: "15px",
             position: "absolute",
-            top: "207px",
-            left: "7%",
+            top: "175px",
+            left: "5%",
           }}
         ></div>
       </div>
@@ -56,7 +56,7 @@ export const Card: React.FC<ICardProps> = ({
         <h5
           style={{
             fontWeight: 600,
-            fontSize: "23px",
+            fontSize: "20px",
             color: "var(--dark-blue)",
           }}
         >
@@ -74,6 +74,7 @@ export const Card: React.FC<ICardProps> = ({
             style={{
               textDecoration: "line-through",
               color: "var(--dark-blue)",
+              fontSize: "16px",
             }}
           >
             {oldPrice}
@@ -82,10 +83,10 @@ export const Card: React.FC<ICardProps> = ({
             style={{
               backgroundColor: "var(--orange)",
               borderRadius: "10px 0 0 10px",
-              padding: "10px 20px",
+              padding: "5px 10px",
             }}
           >
-            <p>{newPrice}</p>
+            <p style={{ fontSize: "14px" }}>{newPrice}</p>
           </span>
         </div>
         <div style={{ paddingBottom: "15px" }}>

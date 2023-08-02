@@ -20,8 +20,17 @@
 }
 
 .products .products-area {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
 }
 
+@media (max-width: 1023px) {
+  .products .products-area {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
 @media (max-width: 768px) {
   .products {
     margin: 40px 10px;
@@ -29,5 +38,13 @@
   .products .title-area img {
     left: 0;
     width: 1000px;
+  }
+  .products .products-area {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 425px) {
+  .products .products-area {
+    grid-template-columns: 1fr;
   }
 }

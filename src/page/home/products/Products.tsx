@@ -38,6 +38,22 @@ export const Products = () => {
           newPrice="R$ 1.000,00"
           paymentDatail="ou em 3x de R$ 333,33"
         />
+        <Card
+          srcImg={lustres}
+          tag="Lustres"
+          title="Lustre suspenso rústico"
+          oldPrice="R$ 1.500,00"
+          newPrice="R$ 1.000,00"
+          paymentDatail="ou em 3x de R$ 333,33"
+        />
+        <Card
+          srcImg={lustres}
+          tag="Lustres"
+          title="Lustre suspenso rústico"
+          oldPrice="R$ 1.500,00"
+          newPrice="R$ 1.000,00"
+          paymentDatail="ou em 3x de R$ 333,33"
+        />
       </div>
     </section>
   );
