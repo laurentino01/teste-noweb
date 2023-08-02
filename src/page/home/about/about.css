@@ -1,0 +1,26 @@
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f7f7f7;
+  margin-top: 40px;
+  padding-top: 40px;
+}
+.about-title-area {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+.about-title-area img {
+  position: absolute;
+  top: -20px;
+  left: -30px;
+  width: 70px;
+  height: 70px;
+}
+.about-about-area {
+  display: flex;
+  gap: 20px;
+}

@@ -1,7 +1,10 @@
 import { Typography } from "../../../components/typography/Typography";
-import pattern from "../../../assets/whitepattern.svg";
-import "./about.css";
+
 import { Button } from "../../../components/buttons/Button";
+import pattern from "../../../assets/whitepattern.svg";
+import aboutImg from "../../../assets/bg-imgs/about-front-img.svg";
+
+import "./about.css";
 
 export const About = () => {
   return (
@@ -13,7 +16,7 @@ export const About = () => {
         </Typography>
       </div>
       <div className="about-about-area">
-        <img src="" alt="" />
+        <img src={aboutImg} alt="" />
         <div>
           <Typography variant="paragraph" element="p">
             Desde 1970 somos especializados em materiais elétricos, sendo uma
