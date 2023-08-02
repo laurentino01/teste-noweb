@@ -4,6 +4,9 @@ import productBG from "../../../assets/bg-imgs/products-background.svg";
 import { Card } from "../../../components/cards/Card";
 import { Typography } from "../../../components/typography/Typography";
 import lustres from "../../../assets/products-imgs/lustre.svg";
+import lampada from "../../../assets/destaques/lampada.svg";
+import reguas from "../../../assets/destaques/reguas.svg";
+import ferramentas from "../../../assets/destaques/kit-ferramentas.svg";
 
 import "./Products.css";
 
@@ -30,12 +33,28 @@ export const Products = () => {
         paymentDatail: "ou em 3x de R$ 333,33",
       },
       {
-        srcImg: "lampada",
+        srcImg: lampada,
         tag: "Lâmpadas",
         title: "Lâmpada",
         oldPrice: "R$ 60,00",
         newPrice: "R$ 45,00",
         paymentDatail: "ou em 2x de R$ 22,50",
+      },
+      {
+        srcImg: reguas,
+        tag: "Acessórios",
+        title: "Filtros de linha",
+        oldPrice: "R$ 25,00",
+        newPrice: "R$ 17,00",
+        paymentDatail: "",
+      },
+      {
+        srcImg: ferramentas,
+        tag: "Ferramentas",
+        title: "Kit de ferramentas",
+        oldPrice: "R$ 100,00",
+        newPrice: "R$ 80,00",
+        paymentDatail: "ou em 2x de R$ 40,00",
       },
     ];
 
