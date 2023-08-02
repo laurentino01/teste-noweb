@@ -3,6 +3,9 @@
   --dark-blue: #202332;
   --electric-blue: #1f2860;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 * {
   margin: 0;

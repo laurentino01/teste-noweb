@@ -98,7 +98,7 @@ export const Products = () => {
   }, []);
 
   return (
-    <section className="products">
+    <section className="products" id="products">
       <div className="title-area">
         <img src={productBG} alt="" />
         <Typography variant="subtitle" element="h2">
