@@ -23,18 +23,52 @@
 .about-about-area {
   display: flex;
   align-items: center;
-  margin-top: -60px;
+  justify-content: center;
+  text-align: center;
+
   gap: 20px;
 }
 
 .about-about-area img {
-  width: 50%;
-  height: 550px;
+  width: 100%;
+  margin-left: -50%;
 }
 .about-about-area > div {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+.about-about-area p {
   width: 450px;
+  text-align: left;
   line-height: 30px;
 }
 .about-about-area button {
   margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .about-about-area {
+    flex-direction: column;
+  }
+  .about-about-area > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-about-area img {
+    margin-left: -40%;
+    width: clamp(31.25rem, 22.3214rem + 44.6429vw, 43.75rem);
+  }
+  .about-about-area p {
+    width: clamp(17.5rem, 9.9107rem + 37.9464vw, 28.125rem);
+    text-align: center;
+  }
+}
+@media (max-width: 425px) {
+  .about-about-area p {
+    text-align: justify;
+    line-height: 20px;
+  }
 }
