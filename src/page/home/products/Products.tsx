@@ -3,8 +3,11 @@ import { Card } from "../../../components/cards/Card";
 import { Typography } from "../../../components/typography/Typography";
 import lustres from "../../../assets/products-imgs/lustre.svg";
 import "./Products.css";
+import { useEffect } from "react";
 
 export const Products = () => {
+  useEffect(() => {}, []);
+
   return (
     <section className="products">
       <div className="title-area">
