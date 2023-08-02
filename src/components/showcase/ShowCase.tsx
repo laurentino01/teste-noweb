@@ -42,7 +42,8 @@ export const ShowCase: React.FC<IShowCaseProps> = ({
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          backgroundColor: "var(--orange)",
+          background: "linear-gradient(var(--orange), #FBA017)",
+
           borderRadius: "40px",
           height: variant[size],
           width: variant[size],
