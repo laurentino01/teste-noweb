@@ -37,6 +37,9 @@
   align-items: baseline;
   gap: 20px;
 }
+.ver-mais a {
+  text-decoration: none;
+}
 .ver-mais img {
   width: 16px;
   height: 16px;
