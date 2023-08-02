@@ -1,10 +1,14 @@
 .categories {
   margin-top: 40px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .categories-subtitle-area {
   background-color: var(--dark-blue);
-  height: 200px;
+  height: 320px;
   width: 100%;
   color: white;
   text-align: center;
@@ -21,4 +25,11 @@
   left: -30px;
   width: 70px;
   height: 70px;
+}
+.categories-categories-area {
+  bottom: -50px;
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
 }
