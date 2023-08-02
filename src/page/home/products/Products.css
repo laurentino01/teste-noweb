@@ -47,7 +47,12 @@
   }
 }
 @media (max-width: 425px) {
+  .products {
+    margin: 40px 0px;
+  }
   .products .products-area {
+    padding-left: 20px;
+    padding-right: 20px;
     max-width: 100%;
     overflow-x: scroll;
     display: flex;

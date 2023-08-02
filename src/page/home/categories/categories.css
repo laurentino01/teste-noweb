@@ -47,6 +47,10 @@
 }
 @media (max-width: 425px) {
   .categories-categories-area {
-    grid-template-columns: 1fr;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 100%;
+    overflow-x: scroll;
+    display: flex;
   }
 }
