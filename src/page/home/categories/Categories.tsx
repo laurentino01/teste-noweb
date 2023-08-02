@@ -4,6 +4,13 @@ import { Typography } from "../../../components/typography/Typography";
 import { ShowCase } from "../../../components/showcase/ShowCase";
 import pattern from "../../../assets/whitepattern.svg";
 import lampada from "../../../assets/products-imgs/lampada.svg";
+import lustres from "../../../assets/products-imgs/lustres-categoria.svg";
+import luminarias from "../../../assets/products-imgs/luminárias-categoria.svg";
+import decoracoes from "../../../assets/products-imgs/decoracoes-categoia.svg";
+import acessorios from "../../../assets/products-imgs/acessorios-categorias.svg";
+import ferramentas from "../../../assets/products-imgs/ferramentas-categoria.svg";
+import utensilios from "../../../assets/products-imgs/utensilios-categoria.svg";
+import cabos from "../../../assets/products-imgs/cabos-categorias.svg";
 
 import "./categories.css";
 
@@ -20,6 +27,34 @@ export const Categories = () => {
       {
         children: "LÂMPADAS",
         srcImg: lampada,
+      },
+      {
+        children: "LUSTRES",
+        srcImg: lustres,
+      },
+      {
+        children: "LUMINÁRIAS",
+        srcImg: luminarias,
+      },
+      {
+        children: "DECORAÇÕES",
+        srcImg: decoracoes,
+      },
+      {
+        children: "ACESSÓRIOS",
+        srcImg: acessorios,
+      },
+      {
+        children: "FERRAMENTAS",
+        srcImg: ferramentas,
+      },
+      {
+        children: "UTENSÍLIOS DOMÉSTICOS",
+        srcImg: utensilios,
+      },
+      {
+        children: "CABOS",
+        srcImg: cabos,
       },
     ];
 

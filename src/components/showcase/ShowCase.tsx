@@ -34,7 +34,7 @@ export const ShowCase: React.FC<IShowCaseProps> = ({
         width: variant[size],
       }}
     >
-      <Typography variant="subtitle" element="h6">
+      <Typography variant="button" element="h6">
         {children}
       </Typography>
       <div
@@ -43,7 +43,7 @@ export const ShowCase: React.FC<IShowCaseProps> = ({
           justifyContent: "center",
           alignItems: "center",
           backgroundColor: "var(--orange)",
-          borderRadius: "15px",
+          borderRadius: "40px",
           height: variant[size],
           width: variant[size],
         }}
