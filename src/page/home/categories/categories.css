@@ -1,0 +1,24 @@
+.categories {
+  margin-top: 40px;
+}
+
+.categories-subtitle-area {
+  background-color: var(--dark-blue);
+  height: 200px;
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding-top: 40px;
+}
+.categories-subtitle-area > div {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+}
+.categories-subtitle-area img {
+  position: absolute;
+  top: -50px;
+  left: -30px;
+  width: 70px;
+  height: 70px;
+}

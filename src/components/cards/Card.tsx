@@ -20,7 +20,8 @@ export const Card: React.FC<ICardProps> = ({
       style={{
         width: "220px",
         backgroundColor: "white",
-        borderRadius: "15px 15px 0 0",
+        borderRadius: "15px",
+        boxShadow: "2px 0px 10px 1px rgba(0, 0, 0, 0.116)",
       }}
     >
       <div
