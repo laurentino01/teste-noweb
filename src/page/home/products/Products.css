@@ -1,0 +1,33 @@
+.products {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 40px;
+}
+.products .title-area img {
+  position: absolute;
+  z-index: -1;
+  right: 20%;
+  width: 900px;
+}
+
+.products .title-area h2 {
+  color: white;
+  margin-top: 200px;
+}
+
+.products .products-area {
+}
+
+@media (max-width: 768px) {
+  .products {
+    margin: 40px 10px;
+  }
+  .products .title-area img {
+    left: 0;
+    width: 1000px;
+  }
+}
