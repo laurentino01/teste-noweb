@@ -21,7 +21,11 @@ export const Hero = () => {
 
         <div className="ver-mais">
           <img src={arrow} alt="" />
-          <a href="#products">Role para ver mais</a>
+          <a href="#products">
+            <Typography variant="paragraph" element="p">
+              Role para ver mais
+            </Typography>
+          </a>
         </div>
       </section>
       <div>
