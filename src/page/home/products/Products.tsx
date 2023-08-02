@@ -7,6 +7,10 @@ import lustres from "../../../assets/products-imgs/lustre.svg";
 import lampada from "../../../assets/destaques/lampada.svg";
 import reguas from "../../../assets/destaques/reguas.svg";
 import ferramentas from "../../../assets/destaques/kit-ferramentas.svg";
+import garfos from "../../../assets/destaques/garfos.svg";
+import chuveiros from "../../../assets/destaques/chuveiros.svg";
+import ventiladores from "../../../assets/destaques/ventilador.svg";
+import tomadas from "../../../assets/destaques/tomadas.svg";
 
 import "./Products.css";
 
@@ -55,6 +59,38 @@ export const Products = () => {
         oldPrice: "R$ 100,00",
         newPrice: "R$ 80,00",
         paymentDatail: "ou em 2x de R$ 40,00",
+      },
+      {
+        srcImg: garfos,
+        tag: "Utensílios domésticos",
+        title: "Garfos de mesa inox",
+        oldPrice: "R$ 15,00",
+        newPrice: "R$ 8,00",
+        paymentDatail: "",
+      },
+      {
+        srcImg: chuveiros,
+        tag: "Acessórios",
+        title: "Chuveiro",
+        oldPrice: "R$ 120,00",
+        newPrice: "R$ 100,00",
+        paymentDatail: "ou em 4 x de R$ 25,00",
+      },
+      {
+        srcImg: ventiladores,
+        tag: "Utensílios domésticos",
+        title: "Ventilador 2 em 1 mesa e parede",
+        oldPrice: "R$ 50,00",
+        newPrice: "R$ 30,00",
+        paymentDatail: "",
+      },
+      {
+        srcImg: tomadas,
+        tag: "Acessórios",
+        title: "Tomada",
+        oldPrice: "R$ 20,00",
+        newPrice: "R$ 10,00",
+        paymentDatail: "",
       },
     ];
 
