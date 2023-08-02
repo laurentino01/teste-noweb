@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import hamburguer from "../../assets/icons/hamburgues.svg";
 import "./responsiveMenu.css";
-import { Typography } from "../typography/Typography";
+
 import { NavLink } from "react-router-dom";
 import { Button } from "../buttons/Button";
 
