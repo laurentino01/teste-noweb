@@ -22,5 +22,19 @@
 }
 .about-about-area {
   display: flex;
+  align-items: center;
+  margin-top: -60px;
   gap: 20px;
+}
+
+.about-about-area img {
+  width: 50%;
+  height: 550px;
+}
+.about-about-area > div {
+  width: 450px;
+  line-height: 30px;
+}
+.about-about-area button {
+  margin-top: 20px;
 }

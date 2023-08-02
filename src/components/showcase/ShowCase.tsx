@@ -21,6 +21,11 @@ export const ShowCase: React.FC<IShowCaseProps> = ({
     small: "40px",
   };
 
+  const radius = {
+    normal: "40px",
+    small: "15px",
+  };
+
   return (
     <div
       style={{
@@ -44,7 +49,7 @@ export const ShowCase: React.FC<IShowCaseProps> = ({
           alignItems: "center",
           background: "linear-gradient(var(--orange), #FBA017)",
 
-          borderRadius: "40px",
+          borderRadius: radius[size],
           height: variant[size],
           width: variant[size],
         }}
