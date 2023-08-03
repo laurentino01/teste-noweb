@@ -1,0 +1,18 @@
+.telesales {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+  background-image: url("../../../assets/bg-imgs/telesales-bg.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-y: bottom;
+}
+.telesales img {
+  height: 320px;
+}
+.telesales div {
+  align-self: flex-end;
+  margin-bottom: 40px;
+}
