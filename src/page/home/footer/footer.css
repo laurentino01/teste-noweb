@@ -1,0 +1,22 @@
+.footer {
+  color: white;
+  background-color: var(--dark-blue);
+  height: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-social-area {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-social-area div:first-of-type > img {
+  margin-bottom: 20px;
+}
+.footer-social-area div:first-of-type > p {
+  line-height: 30px;
+}

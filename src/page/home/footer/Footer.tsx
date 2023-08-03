@@ -1,13 +1,16 @@
 import { Typography } from "../../../components/typography/Typography";
+import logo from "../../../assets/logo-white.svg";
+import "./footer.css";
 
 export const Footer = () => {
   return (
-    <footer>
-      <div>
+    <footer className="footer">
+      <div className="footer-social-area">
         <div>
-          <img src="" alt="" />
+          <img src={logo} alt="" />
           <Typography element="p" variant="paragraph">
-            Venha na Elétrica J. Santos e garanta a melhor opção para sua casa!
+            Venha na Elétrica J. Santos e garanta a melhor <br /> opção para sua
+            casa!
           </Typography>
         </div>
         <div>
