@@ -16,3 +16,19 @@
   align-self: flex-end;
   margin-bottom: 40px;
 }
+.telesales button {
+  box-shadow: 5px 5px 20px 0px #fbaf1785;
+}
+
+@media (max-width: 768px) {
+  .telesales {
+    height: 200px;
+    background-size: cover;
+  }
+  .telesales img {
+    display: none;
+  }
+  .telesales div {
+    margin-bottom: 70px;
+  }
+}
