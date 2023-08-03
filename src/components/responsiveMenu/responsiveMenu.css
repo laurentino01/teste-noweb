@@ -8,7 +8,7 @@
   height: 100vh;
 
   padding: 15px;
-  position: absolute;
+  position: fixed;
   overflow-y: hidden;
   top: 55px;
   transition: 0.2s;
