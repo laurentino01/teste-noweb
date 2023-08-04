@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import hamburguer from "../../assets/icons/hamburgues.svg";
 import "./responsiveMenu.css";
 
@@ -8,6 +8,14 @@ import { Button } from "../buttons/Button";
 export const ResponsiveMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [animate, setAnimate] = useState(false);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.documentElement.style.overflowY = "hidden";
+    } else {
+      document.documentElement.style.overflowY = "scroll";
+    }
+  }, [isOpen]);
 
   const handleOpen = () => {
     if (!isOpen) {
