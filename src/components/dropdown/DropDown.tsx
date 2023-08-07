@@ -60,15 +60,7 @@ export const DropDown: React.FC<IDropDownProps> = ({ children }) => {
           <div className="dropdown-menu-triangle "></div>
           <ul>
             {items.map((item) => (
-              <li
-                key={item.title}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 20,
-                  cursor: "pointer",
-                }}
-              >
+              <li key={item.title} className="dropdown-content-list-item">
                 <ShowCase srcImg={item.srcImg} size="small"></ShowCase>
                 <Typography element="h6" variant="button">
                   {item.title}

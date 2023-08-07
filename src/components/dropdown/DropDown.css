@@ -39,3 +39,9 @@
   border-bottom: 15px solid white;
   position: absolute;
 }
+.dropdown-content-list-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+}
