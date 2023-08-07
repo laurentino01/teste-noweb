@@ -8,6 +8,7 @@ import acessorios from "../../assets/products-imgs/acessorios-categorias.svg";
 import ferramentas from "../../assets/products-imgs/ferramentas-categoria.svg";
 import utensilios from "../../assets/products-imgs/utensilios-categoria.svg";
 import cabos from "../../assets/products-imgs/cabos-categorias.svg";
+import "./DropDown.css";
 
 interface IDropDownProps {
   children: React.ReactNode;
@@ -22,32 +23,8 @@ import { ShowCase } from "../showcase/ShowCase";
 import { Typography } from "../typography/Typography";
 
 export const DropDown: React.FC<IDropDownProps> = ({ children }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [animate, setAnimate] = useState(false);
   const [items, setItems] = useState<IDropDownItemsData[]>([]);
 
-  const handleMouseEnter = () => {
-    if (!isOpen) {
-      setIsOpen(true);
-      setTimeout(() => {
-        setAnimate(true);
-      }, 300);
-    }
-  };
-
-  const handleMouseLeave = () => {
-    setTimeout(() => {
-      if (isOpen) {
-        setAnimate(false);
-        setTimeout(() => {
-          setIsOpen(false);
-        }, 300);
-      }
-    }, 500);
-  };
-  useEffect(() => {
-    console.log(isOpen);
-  }, [isOpen]);
   useEffect(() => {
     const itemsList: IDropDownItemsData[] = [
       { srcImg: lampada, title: "Lâmpada" },
@@ -71,76 +48,35 @@ export const DropDown: React.FC<IDropDownProps> = ({ children }) => {
 
   return (
     <>
-      <div
-        style={{
-          position: "relative",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-        onMouseEnter={handleMouseEnter}
-      >
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: 5,
-            cursor: "pointer",
-          }}
-        >
+      <div className="dropdown">
+        <div className="dropdown-item">
           <Typography element="h6" variant="menuItems">
             {children}
           </Typography>
           <img src={arrow} />
         </div>
-        {isOpen && (
-          <div
-            onMouseLeave={handleMouseLeave}
-            style={{
-              backgroundColor: "white",
-              width: "300px",
-              borderRadius: "15px",
-              padding: "15px",
-              position: "absolute",
-              top: "40px",
-              opacity: animate ? 1 : 0,
-              transition: "0.2s",
-              boxShadow: "5px 5px 5px #13141b42",
-            }}
-          >
-            <div
-              style={{
-                width: 0,
-                height: 0,
-                top: "-13px",
-                left: "50%",
-                right: "25%",
-                borderLeft: "10px solid transparent",
-                borderRight: " 10px solid transparent",
-                borderBottom: "15px solid white",
-                position: "absolute",
-              }}
-            ></div>
-            <ul>
-              {items.map((item) => (
-                <li
-                  key={item.title}
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: 20,
-                    cursor: "pointer",
-                  }}
-                >
-                  <ShowCase srcImg={item.srcImg} size="small"></ShowCase>
-                  <Typography element="h6" variant="button">
-                    {item.title}
-                  </Typography>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
+
+        <div className="dropdown-content">
+          <div className="dropdown-menu-triangle "></div>
+          <ul>
+            {items.map((item) => (
+              <li
+                key={item.title}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 20,
+                  cursor: "pointer",
+                }}
+              >
+                <ShowCase srcImg={item.srcImg} size="small"></ShowCase>
+                <Typography element="h6" variant="button">
+                  {item.title}
+                </Typography>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </>
   );
