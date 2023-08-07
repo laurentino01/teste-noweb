@@ -42,6 +42,7 @@ const Card = memo(function Card({
         >
           {tag}
         </div>
+
         <img src={srcImg} alt="" style={{ width: "220px" }} />
         <div
           style={{
