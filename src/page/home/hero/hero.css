@@ -2,7 +2,7 @@
   display: flex;
   padding-left: clamp(1.25rem, -3.3929rem + 23.2143vw, 17.5rem);
   padding-right: 140px;
-  background-image: url("../../../assets/bg-imgs/hero-background.svg");
+  background-image: url("../../../assets/bg-imgs/hero-background.png");
   background-repeat: no-repeat;
   overflow: hidden;
 }

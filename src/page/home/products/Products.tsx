@@ -2,14 +2,14 @@ import { Suspense, lazy, useEffect, useState } from "react";
 
 import { Typography } from "../../../components/typography/Typography";
 import productBG from "../../../assets/bg-imgs/products-background.svg";
-import lustres from "../../../assets/products-imgs/lustre.svg";
-import lampada from "../../../assets/destaques/lampada.svg";
-import reguas from "../../../assets/destaques/reguas.svg";
-import ferramentas from "../../../assets/destaques/kit-ferramentas.svg";
-import garfos from "../../../assets/destaques/garfos.svg";
-import chuveiros from "../../../assets/destaques/chuveiros.svg";
-import ventiladores from "../../../assets/destaques/ventilador.svg";
-import tomadas from "../../../assets/destaques/tomadas.svg";
+import lustres from "../../../assets/destaques/lustre.png";
+import lampada from "../../../assets/destaques/lampada.png";
+import reguas from "../../../assets/destaques/reguas.png";
+import ferramentas from "../../../assets/destaques/ferramentas.png";
+import garfos from "../../../assets/destaques/garfos.png";
+import chuveiros from "../../../assets/destaques/chuveiros.png";
+import ventiladores from "../../../assets/destaques/ventilador.png";
+import tomadas from "../../../assets/destaques/tomadas.png";
 
 import "./Products.css";
 
