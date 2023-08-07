@@ -1,8 +1,7 @@
-import { useEffect, useState } from "react";
+import { Suspense, lazy, useEffect, useState } from "react";
 
-import productBG from "../../../assets/bg-imgs/products-background.svg";
-import { Card } from "../../../components/cards/Card";
 import { Typography } from "../../../components/typography/Typography";
+import productBG from "../../../assets/bg-imgs/products-background.svg";
 import lustres from "../../../assets/products-imgs/lustre.svg";
 import lampada from "../../../assets/destaques/lampada.svg";
 import reguas from "../../../assets/destaques/reguas.svg";
@@ -13,6 +12,8 @@ import ventiladores from "../../../assets/destaques/ventilador.svg";
 import tomadas from "../../../assets/destaques/tomadas.svg";
 
 import "./Products.css";
+
+const Card = lazy(() => import("../../../components/cards/Card.tsx"));
 
 interface IProductListData {
   srcImg: string;
@@ -106,17 +107,19 @@ export const Products = () => {
         </Typography>
       </div>
       <div className="products-area">
-        {productList.map((item) => (
-          <Card
-            key={item.title}
-            srcImg={item.srcImg}
-            tag={item.tag}
-            title={item.title}
-            oldPrice={item.oldPrice}
-            newPrice={item.newPrice}
-            paymentDatail={item.paymentDatail}
-          />
-        ))}
+        <Suspense fallback={"..."}>
+          {productList.map((item) => (
+            <Card
+              key={item.title}
+              srcImg={item.srcImg}
+              tag={item.tag}
+              title={item.title}
+              oldPrice={item.oldPrice}
+              newPrice={item.newPrice}
+              paymentDatail={item.paymentDatail}
+            />
+          ))}
+        </Suspense>
       </div>
     </section>
   );

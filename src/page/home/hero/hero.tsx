@@ -3,8 +3,9 @@ import { Typography } from "../../../components/typography/Typography";
 import arrow from "../../../assets/icons/hero-arrow.svg";
 import heroImg from "../../../assets/bg-imgs/hero-woman-img.svg";
 import "./hero.css";
+import { memo } from "react";
 
-export const Hero = () => {
+const Hero = memo(function Hero() {
   return (
     <main className="hero">
       <section>
@@ -33,4 +34,6 @@ export const Hero = () => {
       </div>
     </main>
   );
-};
+});
+
+export default Hero;

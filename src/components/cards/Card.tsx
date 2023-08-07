@@ -1,3 +1,5 @@
+import { memo } from "react";
+
 interface ICardProps {
   tag: string;
   srcImg: string;
@@ -7,14 +9,14 @@ interface ICardProps {
   paymentDatail: string;
 }
 
-export const Card: React.FC<ICardProps> = ({
+const Card = memo(function Card({
   tag,
   srcImg,
   title,
   oldPrice,
   newPrice,
   paymentDatail,
-}) => {
+}: ICardProps) {
   return (
     <div
       style={{
@@ -96,4 +98,6 @@ export const Card: React.FC<ICardProps> = ({
       </div>
     </div>
   );
-};
+});
+
+export default Card;

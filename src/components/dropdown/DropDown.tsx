@@ -31,19 +31,23 @@ export const DropDown: React.FC<IDropDownProps> = ({ children }) => {
       setIsOpen(true);
       setTimeout(() => {
         setAnimate(true);
-      }, 200);
+      }, 300);
     }
   };
 
   const handleMouseLeave = () => {
-    if (isOpen) {
-      setAnimate(false);
-      setTimeout(() => {
-        setIsOpen(false);
-      }, 200);
-    }
+    setTimeout(() => {
+      if (isOpen) {
+        setAnimate(false);
+        setTimeout(() => {
+          setIsOpen(false);
+        }, 300);
+      }
+    }, 500);
   };
-
+  useEffect(() => {
+    console.log(isOpen);
+  }, [isOpen]);
   useEffect(() => {
     const itemsList: IDropDownItemsData[] = [
       { srcImg: lampada, title: "Lâmpada" },
@@ -75,6 +79,7 @@ export const DropDown: React.FC<IDropDownProps> = ({ children }) => {
           justifyContent: "center",
         }}
         onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
       >
         <div
           style={{
@@ -91,6 +96,7 @@ export const DropDown: React.FC<IDropDownProps> = ({ children }) => {
         </div>
         {isOpen && (
           <div
+            onMouseOver={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             style={{
               backgroundColor: "white",
