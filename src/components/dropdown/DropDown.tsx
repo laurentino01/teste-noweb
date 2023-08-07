@@ -79,7 +79,6 @@ export const DropDown: React.FC<IDropDownProps> = ({ children }) => {
           justifyContent: "center",
         }}
         onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
       >
         <div
           style={{
@@ -96,7 +95,6 @@ export const DropDown: React.FC<IDropDownProps> = ({ children }) => {
         </div>
         {isOpen && (
           <div
-            onMouseOver={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             style={{
               backgroundColor: "white",
